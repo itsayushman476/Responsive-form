@@ -1,73 +1,102 @@
+/* Reset default styles */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #667eea, #764ba2);
 }
 
 .login-container {
-  background: #fff;
-  padding: 30px 25px;
-  border-radius: 10px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .login-form h2 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
   color: #333;
 }
 
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
 }
 
 .input-group input {
   width: 100%;
-  padding: 10px;
+  padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
-button {
+.input-group input:focus {
+  border-color: #667eea;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+button[type="submit"] {
   width: 100%;
-  padding: 12px;
-  background-color: #4facfe;
+  padding: 0.75rem;
+  background-color: #667eea;
+  color: #fff;
   border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #00c6ff;
+button[type="submit"]:hover {
+  background-color: #5a67d8;
 }
 
 .signup-text {
   text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
 }
 
 .signup-text a {
-  color: #4facfe;
+  color: #667eea;
   text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
 }
